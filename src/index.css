@@ -1,7 +1,7 @@
-
 html, body {
+  width: 100%;
   height: 100%;
-  margin: auto;
+  margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -13,14 +13,18 @@ html, body {
 }
 
 #main {
-  background: url("photos/elk.jpg"); 
+  background-image: url("photos/elk.jpg"); 
   opacity: 0.5;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
-  object-fit: contain;
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 #root {

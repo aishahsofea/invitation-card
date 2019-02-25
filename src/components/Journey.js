@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 class Journey extends Component {
   constructor() {
@@ -37,14 +35,11 @@ class Journey extends Component {
     return markup;
    }
 
-  render() {   
-    
-    AOS.init();
-    
+  render() {       
     return(
       <div>
         <h1 className="title" data-aos="fade-in">Our Journey</h1>
-        <p data-aos="fade-in">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed turpis massa, scelerisque vel diam non.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed turpis massa, scelerisque vel diam non.</p>
 
         <div className="container" data-aos="fade-down">
           <div className="row">

@@ -266,8 +266,12 @@
   }
 }
 
-.name-and-headshot {
-  text-align: center; 
+.role-title, .name-and-headshot {
+  font-family: 'Great Vibes', cursive;
+}
+
+.imp-ppl-headshots {
+  margin: 1em;
 }
 
 .imp-ppl-headshot {
@@ -280,3 +284,93 @@
   transform: scale(1)
 }
 
+/* COUNTDOWN STYLES */
+
+#countdown {
+  width: 462px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  padding: 0;
+  list-style: none;
+}
+
+#countdown li {
+  display: table;
+  text-align: center;
+  float: left;
+  background: rgb(255, 255, 255, 0.4);
+  color: #000000;
+  margin: 2px;
+  width: 150px;
+  height: 150px;
+}
+
+#countdown li:nth-child(3) {
+  clear: left;
+  margin-left: 156px;
+}
+
+#countdown li div {
+  transform: rotate(45deg);
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#countdown li div span {
+  display: block;
+  font-size: 3rem;
+  color: #000000;
+}
+
+@media only screen and (max-width: 600px) {
+  #countdown {
+    max-width: 346.5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    padding: 0;
+    list-style: none;
+  }
+
+  #countdown li {
+    display: table;
+    text-align: center;
+    float: left;
+    background: rgb(255, 255, 255, 0.4);
+    color: #000000;
+    margin: 2px;
+    width: 112.5px;
+    height: 112.5px;
+  }
+
+  #countdown li:nth-child(3) {
+    clear: left;
+    margin-left: 116px;
+  }
+
+
+  #countdown li div {
+    transform: rotate(-45deg);
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  #countdown li div span {
+    display: block;
+    font-size: 2rem;
+    color: #000000;
+  }
+
+}
+
+/* RSVP styles */
+
+.form-wrapper {
+  width: 100%;
+  text-align: left;
+  max-width: 800px;
+  padding: 2em;
+}

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import anime from 'animejs/lib/anime.es.js';
 import $ from 'jQuery/dist/jquery.min.js';
 import bridesmaid from '../photos/bridesmaid.png';
@@ -10,19 +8,8 @@ import bestman from '../photos/bestman.png';
 class ImportantPeople extends Component {
   constructor() {
     super();
-    this.animate = this.animate.bind(this);
+    this.renderHeadshots = this.renderHeadshots.bind(this);
   }
-
-  animate() {
-    // anime({
-    //   targets: '.haha',
-    //   translateX: 270,
-    //   delay: anime.stagger(100) // increase delay by 100ms for each elements.
-    // });
-
-    console.log('amazing')
-  }
-
 
   componentDidMount() {
     $(window).scroll(() => {
@@ -54,11 +41,26 @@ class ImportantPeople extends Component {
     })
   }
 
+  renderHeadshots(role, name) {
+    let headShotMarkup =
+    <div className="col-sm-6 name-and-headshot">
+      <img className=" imp-ppl-headshot" src={role} alt={`${role}`}/>
+      <p>{name}</p>
+    </div>
+    let markup = 
+    <div className="row imp-ppl-headshots">
+      {headShotMarkup}
+      {headShotMarkup}
+      {headShotMarkup}
+      {headShotMarkup}
+   
+    </div>
+
+    return markup;
+  }
+
 
   render() {
-    
-    AOS.init();
-
     return(
       <div>
         <h1 className="title" data-aos="fade-in">Important   People</h1>
@@ -66,57 +68,15 @@ class ImportantPeople extends Component {
         <div className="container">
          <div className="row" data-aos="fade-down">
           <div className="col-md">
-            <h3>Bestmen</h3>
-            <div className="row imp-ppl-headshots">
-              <div className="name-and-headshot">
-                <img className=" imp-ppl-headshot" src={bestman} alt="bestman"/>
-                <p>Kyrie</p>
-              </div>
-              <div className="name-and-headshot">
-                <img className=" imp-ppl-headshot" src={bestman} alt="bestman"/>
-                <p>Kyrie</p>
-              </div>
-              <div className="name-and-headshot">
-                <img className=" imp-ppl-headshot" src={bestman} alt="bestman"/>
-                <p>Kyrie</p>
-              </div>
-              <div className="name-and-headshot">
-                <img className=" imp-ppl-headshot" src={bestman} alt="bestman"/>
-                <p>Kyrie</p>
-              </div>
-           
-            </div>
+            <h3 className="role-title">Bestmen</h3>
+            {this.renderHeadshots(bestman, 'Kyrie')}
           </div>
           <div className="col-md">
-            <h3>Bridesmaids</h3>
-            <div className="row imp-ppl-headshots">
-              <div className="col-sm-6 col-sm-offset-6 col-md-3 col-md-offset-3 name-and-headshot">
-                <img className=" imp-ppl-headshot" src={bridesmaid} alt="bridesmaid"/>
-                Kyraa
-              </div>
-              <div className="col-sm-6 col-sm-offset-6 col-md-3 col-md-offset-3 name-and-headshot">
-                <img className=" imp-ppl-headshot" src={bridesmaid} alt="bridesmaid"/>
-                <p>Kyraa</p>
-              </div>
-              <div className="col-sm-6 col-sm-offset-6 col-md-3 col-md-offset-3 name-and-headshot">
-                <img className=" imp-ppl-headshot" src={bridesmaid} alt="bridesmaid"/>
-                <p>Kyraa</p>
-              </div>
-              <div className="col-sm-6 col-sm-offset-6 col-md-3 col-md-offset-3 name-and-headshot">
-                <img className=" imp-ppl-headshot" src={bridesmaid} alt="bridesmaid"/>
-                <p>Kyraa</p>
-              </div>
-            </div>
+            <h3 className="role-title">Bridesmaids</h3>
+            {this.renderHeadshots(bridesmaid, 'Kyraa')}
           </div>
          </div>
         </div>
-
-        <h1>wtv</h1>
-        <h1>wtv</h1>
-        <h1>wtv</h1>
-        <h1>wtv</h1>
-        <h1>wtv</h1>
-        <h1>wtv</h1>
 
       </div>
     )

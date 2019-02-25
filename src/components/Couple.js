@@ -1,21 +1,16 @@
 import React, { Component } from 'react';
 import bride from '../photos/bride-headshot.jpg';
 import groom from '../photos/groom-headshot.jpg';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
 
 class Couple extends Component {
   render() {
-
-    AOS.init();
     return(
       <div>
-        <h1 className="title" data-aos="fade-in">The Couple</h1>
-        <div className="container">
+        <h1 className="title" data-aos="fade-in">About Us</h1>
+        <div className="container" data-aos="fade-up">
         <div className="row">
           <div className="col-sm-12 col-md-6">
-          <div className="headshot-wrapper" data-aos="fade-right">
+          <div className="headshot-wrapper" >
             <img className="headshot" src={groom} alt="groom" />
             <div className="overlay"><p>Jorge</p></div>
           </div>
@@ -32,7 +27,7 @@ class Couple extends Component {
           </div>
 
           <div className="col-sm-12 col-md-6">
-          <div className="headshot-wrapper" data-aos="fade-left">
+          <div className="headshot-wrapper" >
             <img className="headshot" src={bride} alt="bride" />
             <div className="overlay">
               <p>Anfisa</p>
