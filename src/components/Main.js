@@ -6,7 +6,7 @@ class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      date: new Date(Date.parse("Feb 20, 2020 23:00:00 GMT +1")),
+      date: new Date(Date.parse("Feb 2, 2020 23:00:00 GMT +1")),
       days: 0,
       hours: 0,
       min: 0,
@@ -109,7 +109,3 @@ class Main extends Component {
 }
 
 export default Main;
-
-// <li><div><span>{this.addLeadingZeros(this.state.hours)}</span>{`${this.state.hours !== 1 ? 'HOURS' : 'HOUR'}`}</div></li>
-// <li><div><span>{this.addLeadingZeros(this.state.min)}</span>{`${this.state.min !== 1 ? 'MINUTES' : 'MINUTE'}`}</div></li>
-// <li><div><span>{this.addLeadingZeros(this.state.sec)}</span>{`${this.state.sec !== 1 ? 'SECONDS' : 'SECOND'}`}</div></li>

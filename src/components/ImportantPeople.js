@@ -43,17 +43,17 @@ class ImportantPeople extends Component {
 
   renderHeadshots(role, name) {
     let headShotMarkup =
-    <div className="col-sm-6 name-and-headshot">
+    <div className="col-6 col-lg-3 name-and-headshot">
       <img className=" imp-ppl-headshot" src={role} alt={`${role}`}/>
       <p>{name}</p>
     </div>
+
     let markup = 
     <div className="row imp-ppl-headshots">
       {headShotMarkup}
       {headShotMarkup}
       {headShotMarkup}
       {headShotMarkup}
-   
     </div>
 
     return markup;

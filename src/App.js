@@ -15,6 +15,7 @@ class App extends Component {
         <Couple/>
         <Journey/>
         <ImportantPeople/>
+        <Rsvp/>
       </div>     
     )
   }
